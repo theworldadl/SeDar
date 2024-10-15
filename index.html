@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmulatorJS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        #emulatorContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="emulatorContainer"></div>
+
+    <script src="core/emulator.js"></script> <!-- Asegúrate de que esta ruta sea correcta -->
+
+    <script>
+        // Código para inicializar el emulador
+        window.onload = function() {
+            const emulatorContainer = document.getElementById('emulatorContainer');
+            
+            // Aquí asegúrate de que este código cargue el emulador correcto
+            EJS_player = '#emulatorContainer';
+            EJS_gameUrl = 'path_to_your_game.rom'; // Cambia esto por el juego que quieras cargar
+            EJS_core = 'gc'; // Esto depende de qué emulador estés usando (GC para GameCube, por ejemplo)
+
+            // Inicializa el emulador con las configuraciones necesarias
+            EJS_start();
+        };
+    </script>
+</body>
+</html>
